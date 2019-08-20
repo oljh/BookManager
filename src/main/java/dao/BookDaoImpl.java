@@ -22,7 +22,7 @@ public class BookDaoImpl implements BookDao {
     public void addBook(Book book) {
         Session session = this.sessionFactory.getCurrentSession();
         session.persist(book);
-        logger.info("Book sucessfully saved. Book details:" + book);
+        logger.info("Book successfully saved. Book details:" + book);
     }
 
     @Override
