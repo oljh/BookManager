@@ -27,21 +27,41 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public void updateBook(Book book) {
-
+        Session session = this.sessionFactory.getCurrentSession();
+        session.update(book);
+        logger.info("Book successfully updated. Book details:" + book);
     }
 
     @Override
     public void removeBook(int id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        Book book = (Book) session.load(Book.class, new Integer(id));
 
+        if(book!=null){
+            session.delete(book);
+        }
+        session.delete(id);
+        logger.info("Book successfully removed. Book details:" + id);
     }
 
     @Override
     public Book getBookById(int id) {
-        return null;
+        Session session = this.sessionFactory.getCurrentSession();
+        Book book = (Book) session.load(Book.class, new Integer(id));
+
+        logger.info("Book successfully loaded. Book details:" + book);
+        return book;
     }
 
     @Override
-    public List<Book> listBook() {
-        return null;
+    @SuppressWarnings("unchacked")
+    public List<Book> listBooks() {
+        Session session = this.sessionFactory.getCurrentSession();
+        List<Book> bookList = session.createQuery("from Book").list();
+        for(Book book :bookList){
+            logger.info("Book list:" + book);
+        }
+
+        return bookList;
     }
 }

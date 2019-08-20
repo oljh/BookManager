@@ -9,6 +9,6 @@ public interface BookDao {
     public void updateBook(Book book);
     public void removeBook(int id);
     public Book getBookById(int id);
-    public List<Book> listBook();
+    public List<Book> listBooks();
 
 }
