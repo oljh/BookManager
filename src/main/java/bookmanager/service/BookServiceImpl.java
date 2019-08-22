@@ -1,7 +1,7 @@
-package service;
+package bookmanager.service;
 
-import dao.BookDao;
-import model.Book;
+import bookmanager.dao.BookDao;
+import bookmanager.model.Book;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package model;
+package bookmanager.model;
 import javax.persistence.*;
 
 @Entity

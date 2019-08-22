@@ -1,6 +1,6 @@
-package dao;
+package bookmanager.dao;
 
-import model.Book;
+import bookmanager.model.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class BookDaoImpl implements BookDao {
+public class BookDaoImpl implements bookmanager.dao.BookDao {
     private static final Logger logger = LoggerFactory.getLogger(BookDaoImpl.class);
     private SessionFactory sessionFactory;
 
