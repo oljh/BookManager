@@ -17,9 +17,9 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     <!--Database Information-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/BOOKMANAGER"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/bookmanager"/>
         <property name="username" value="root"/>
-        <property name="password" value="22644122644lq"/>
+        <property name="password" value="123456"/>
     </bean>
 
     <bean id="hibernate5AnnotationSessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
