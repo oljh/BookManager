@@ -87,7 +87,7 @@
 <h1>Adds Book</h1>
 <c:url var="addAction" value="/books/add"/>
 
-<form:form action="${addAction}" commandName="book">
+<form:form action="${addAction}" modelAttribute="book">
     <table>
         <c:if test="${!empty book.bookTitle}">
             <tr>
