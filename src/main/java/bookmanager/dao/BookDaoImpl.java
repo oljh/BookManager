@@ -35,19 +35,19 @@ public class BookDaoImpl implements bookmanager.dao.BookDao {
     @Override
     public void removeBook(int id) {
         Session session = this.sessionFactory.getCurrentSession();
-        Book book = (Book) session.load(Book.class, id);
+        Book book = (Book) session.load(Book.class, new Integer(id));
 
         if(book!=null){
             session.delete(book);
         }
-        session.delete(id);
-        logger.info("Book successfully removed. Book details:" + id);
+
+        logger.info("Book successfully removed. Book details:" + book);
     }
 
     @Override
     public Book getBookById(int id) {
         Session session = this.sessionFactory.getCurrentSession();
-        Book book = (Book) session.load(Book.class, id);
+        Book book = (Book) session.load(Book.class, new Integer(id));
 
         logger.info("Book successfully loaded. Book details:" + book);
         return book;

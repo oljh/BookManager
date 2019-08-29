@@ -40,7 +40,7 @@ public class BookController {
         return "redirect:/books";
     }
 
-    @RequestMapping("/remove/{id}")
+    @RequestMapping("remove/{id}")
     public String removeBook(@PathVariable("id") int id){
         this.bookService.removeBook(id);
 

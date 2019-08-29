@@ -2,11 +2,11 @@ package bookmanager.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "BOOKS")
+@Table(name = "books")
 public class Book {
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   // @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     @Column(name = "BOOK_TITLE")
     private String bookTitle;

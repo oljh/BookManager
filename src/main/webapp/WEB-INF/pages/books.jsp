@@ -67,6 +67,7 @@
             <th width="80">ID</th>
             <th width="120">Title</th>
             <th width="120">Author</th>
+            <th width="120">Price</th>
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
