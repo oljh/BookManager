@@ -36,7 +36,7 @@ public class BookDaoImpl implements bookmanager.dao.BookDao {
     public void removeBook(int id) {
         Session session = this.sessionFactory.getCurrentSession();
         Book book = (Book) session.load(Book.class, new Integer(id));
-
+        System.out.println(book.getId());
         if(book!=null){
             session.delete(book);
         }
